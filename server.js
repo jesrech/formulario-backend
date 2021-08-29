@@ -9,7 +9,7 @@ const cors =  require('cors');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://user1:deCh3S7scQz4xjm@cluster0.r7m7w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
